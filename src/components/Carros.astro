@@ -1,14 +1,22 @@
 ---
-import Carro from "../components/Carro.astro"
+import Carro from "../components/Carro.astro";
+import carros from "../data/carros.json"; 
 ---
 
 <div>
-    <Carro></Carro>
-    <Carro></Carro>
-    <Carro></Carro>
-    <Carro></Carro>
+  {carros.map((carro) => (
+    <Carro
+      nome={carro.nome}
+      tipo={carro.tipo}
+      valorDiario={carro.valorDiario}
+      diarias={carro.diarias}
+      valorTotal={carro.valorTotal}
+      cambio={carro.cambio}
+      capacidadeMalas={carro.capacidadeMalas}
+      imagemCarro={carro.imagemCarro}
+    />
+  ))}
 </div>
-
 
 <style>
 

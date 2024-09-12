@@ -1,4 +1,7 @@
 ---
+const { nome, tipo, valorDiario, diarias, valorTotal, cambio, capacidadeMalas, imagemCarro, iconCambio, iconMalas } = Astro.props;
+
+import CarDate from "../data/carros.json";
 import Image from "astro/components/Image.astro";
 import ImgCarro from "/public/images/corolla.png";
 import IconCambio from "/public/images/icone-transmissao.svg";
@@ -7,24 +10,28 @@ import IconMalas from "/public/images/icone-malas.svg";
 ---
 <div class="pai">
     <div class="foto">
-        <Image src={ImgCarro} alt="Toyota Corrola" />
+        <Image src={imagemCarro} 
+            width={215}  
+            height={180} 
+            alt="Imagem de um carro" />
     </div>
+
     <div class="conteudo">
         <div class="cima">
             <div class="nome-carro">
-                <h3>Toyota Corolla</h3>
-                <p>Sedan Medio</p>
+                <h3>{nome}</h3>
+                <p>{tipo}</p>
             </div>
             <div class="valor-diario">
-                <h4>R$ 93,00</h4>
+                <h4>R$ {valorDiario},00</h4>
                 <p>valor diário</p>
             </div>
             <div class="diarias">
-                <h4>01</h4>
+                <h4>{diarias}</h4>
                 <p>dia(s)</p>
             </div>
             <div class="valor-total">
-                <h4>R$ 93,00</h4>
+                <h4>R$ {valorTotal},00</h4>
                 <p>Valor total</p>
             </div>
         </div>
@@ -34,12 +41,12 @@ import IconMalas from "/public/images/icone-malas.svg";
         <div class="detalhes">
             <div class="cambio">
                 <Image src={IconCambio} alt="Icone cambio" />
-                <p> Automático </p>
+                <p> {cambio} </p>
             </div>
 
             <div class="malas">
                 <Image src={IconMalas} alt="Icone malas"/>
-                <p> 460 Litros </p>
+                <p> {capacidadeMalas} </p>
             </div>
         </div>
 
@@ -63,11 +70,26 @@ import IconMalas from "/public/images/icone-malas.svg";
         max-width: 850px;
         max-height: 180px;
 
+        .foto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conteudo {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-right: 10px;
+        }
+
         .cima {
             display: flex;
             justify-content: space-between;
             gap: 50px;
-            padding: 0px 0px 0px 30px;
+            margin-right: 30px;
+            margin-left: 30px;
+           
 
             .nome-carro {
                 h3 {
@@ -157,7 +179,5 @@ import IconMalas from "/public/images/icone-malas.svg";
 
         }
     }
-
-
 
 </style>

@@ -1,0 +1,47 @@
+
+[
+    {
+      "nome": "Toyota Corolla",
+      "tipo": "Sedan Medio",
+      "valorDiario": 93.00,
+      "diarias": 1,
+      "valorTotal": 93.00,
+      "cambio": "Automático",
+      "capacidadeMalas": "460 Litros",
+      "imagemCarro": "/public/images/corolla.png"
+    },
+
+    {
+      "nome": "GM Onix",
+      "tipo": "Hatch Médio",
+      "valorDiario": 77.00,
+      "diarias": 1,
+      "valorTotal": 77.00,
+      "cambio": "Manual",
+      "capacidadeMalas": "320 Litros",
+      "imagemCarro": "/public/images/onix.png"
+    },
+
+    {
+      "nome": "Fiat Mobi",
+      "tipo": "Hatch compacto",
+      "valorDiario": 58.00,
+      "diarias": 1,
+      "valorTotal": 58.00,
+      "cambio": "Manual",
+      "capacidadeMalas": "120 Litros",
+      "imagemCarro": "/public/images/mobi.png"
+    },
+
+    {
+      "nome": "VW Nivus",
+      "tipo": "SUV",
+      "valorDiario": 122.00,
+      "diarias": 1,
+      "valorTotal": 122.00,
+      "cambio": "Automático",
+      "capacidadeMalas": "320 Litros",
+      "imagemCarro": "/public/images/nivus.png"
+    }
+  ]
+
