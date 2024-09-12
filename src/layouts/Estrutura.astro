@@ -1,0 +1,66 @@
+---
+import Logo from "../components/ui/logo.astro"
+import Navigation from "../components/Navigation.astro"
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alugcar - Reserva seu carro agora!</title>
+</head>
+<body>
+    <main>
+        <div>
+            <aside>
+                <div class="logo">
+                    <Logo />
+                </div>
+                <Navigation />
+            </aside>
+            <div>
+                <slot />
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<style is:global>
+:root{
+    --colorDarkBlue: #070F1D;
+    --colorYellow: #F79F11;
+    --colorGray: #838485;
+    --colorBlue: #121D36;
+    --colorWhite: #FFFFFF;
+    --colorWhiteLight: #F0F4FA;
+
+    --fontInter: 'inter', sans-serif;
+}
+</style>
+
+<style lang="scss">
+body{
+    background-color: var(--colorDarkBlue); 
+}
+
+main{
+    > div{
+        display: flex;
+        gap: 87px;
+        padding-top: 48px;
+        margin: 0 auto;
+        justify-content: center;
+
+        > div{
+            background-color: var(--colorWhiteLight);
+            width: 976px;
+            padding: 56px 64px;
+            border-radius: 16px;
+        }
+    }
+}
+
+
+</style>

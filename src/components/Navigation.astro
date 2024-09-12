@@ -1,0 +1,41 @@
+---
+import IconeCarros from "../components/ui/icone-menu-carros.astro"
+import IconeMenuDados from "../components/ui/icone-menu-dados.astro"
+import IconeMenuFinal from "../components/ui/icone-menu-final.astro"
+---
+
+<nav>
+    <a href="/">
+        <IconeCarros />
+        <span>Selecione seu carro</span>
+    </a>
+    <a href="/dados">
+        <IconeMenuDados />
+        <span>Preencha seus dados</span>
+    </a>
+    <a href="/final">
+        <IconeMenuFinal />
+        <span>Finalize a reserva</span>
+    </a>
+</nav>
+
+<style lang="scss">
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        gap: 64px;
+        
+
+        a{
+            text-align: center;
+
+            span{
+                color: var(--colorWhite);
+                width: 90px;
+                display: block;
+            }
+        }
+    }
+</style>

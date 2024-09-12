@@ -1,0 +1,163 @@
+---
+import Image from "astro/components/Image.astro";
+import ImgCarro from "/public/images/corolla.png";
+import IconCambio from "/public/images/icone-transmissao.svg";
+import IconMalas from "/public/images/icone-malas.svg";
+
+---
+<div class="pai">
+    <div class="foto">
+        <Image src={ImgCarro} alt="Toyota Corrola" />
+    </div>
+    <div class="conteudo">
+        <div class="cima">
+            <div class="nome-carro">
+                <h3>Toyota Corolla</h3>
+                <p>Sedan Medio</p>
+            </div>
+            <div class="valor-diario">
+                <h4>R$ 93,00</h4>
+                <p>valor diário</p>
+            </div>
+            <div class="diarias">
+                <h4>01</h4>
+                <p>dia(s)</p>
+            </div>
+            <div class="valor-total">
+                <h4>R$ 93,00</h4>
+                <p>Valor total</p>
+            </div>
+        </div>
+
+        <div class="baixo">
+        
+        <div class="detalhes">
+            <div class="cambio">
+                <Image src={IconCambio} alt="Icone cambio" />
+                <p> Automático </p>
+            </div>
+
+            <div class="malas">
+                <Image src={IconMalas} alt="Icone malas"/>
+                <p> 460 Litros </p>
+            </div>
+        </div>
+
+        <div class="reservar">
+            <button> Reservar </button>
+        </div>
+
+        </div>
+    </div>
+
+</div>
+
+<style lang="scss">
+    .pai {
+        display: flex;
+        background-color: var(--colorWhite);
+        font-family: var(--fontInter);
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 20px;
+        max-width: 850px;
+        max-height: 180px;
+
+        .cima {
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            padding: 0px 0px 0px 30px;
+
+            .nome-carro {
+                h3 {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .valor-diario {
+                h4 {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .diarias {
+                h4 {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .valor-total {
+                h4 {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .baixo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding: 0px 0px 0px 30px;
+
+            .detalhes {
+                display: flex;
+                gap: 30px;
+
+                .cambio {
+                    display: flex;
+                    gap: 5px;
+
+                }
+
+                .malas {
+                    display: flex;
+                    gap: 5px;
+                }
+                
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .reservar {
+                button {
+                    background-color: var(--colorYellow);
+                    color: var(--colorblack);
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 180px;
+                    height: 48px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+
+
+</style>
